@@ -9,4 +9,4 @@ This is just a x64dbg script system support.
 ![manual_Page_07](https://user-images.githubusercontent.com/7176580/156008144-928c66bd-214d-4be4-a602-1a852d397a2a.jpg)
 ![manual_Page_08](https://user-images.githubusercontent.com/7176580/156008145-b47ad8b4-4d0c-425a-a230-90c53a5a46cb.jpg)
 ![manual_Page_09](https://user-images.githubusercontent.com/7176580/156008147-2e315ab4-834a-40d2-b8ec-dbfc3e4bcf37.jpg)
-![manual_Page_10](https://user-images.githubusercontent.com/7176580/156008150-5824e40c-e0c1-47a4-b67c-9e22eec01bfa.jpg)
+![manual_Page_10](https://user-images.githubusercontent.com/7176580/156157357-36dba194-31eb-4099-b0b7-4565bdc16766.jpg)
