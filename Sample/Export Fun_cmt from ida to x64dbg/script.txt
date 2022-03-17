@@ -1,0 +1,25 @@
+strarr re[1]  // this will used to fill data from ReadFile function it will resized auto
+strarr r[4]   // this will fill the strcture of the Func.txt
+re=ReadFile  'D:\Func.txt'
+int i,0  // counter for loop
+logs $mod.main()  // will log base address of the main module
+if.1 i<$ArrayLen(re)  // now will check if i reach array length
+strAlign {r[0],r[1],r[2],r[3]},re[i],';'  // check manual this will devide string by seperator ;
+//in case functions r[0] lable; r[1]lablename; r[2] FunctionBeginAddress; r[3] FunctionEndAddress
+if.2 r[0]=='lable'
+r[2]=r[2]+$mod.main()
+r[3]=r[3]+$mod.main() -1 // -1 IDA is end func at the begin in next function
+functionadd r[2],r[3]
+labelset r[2],r[1]
+logs 'function' + r[2] + ' add at : ' + r[1]
+End.2
+// in case comments r[0] comments; r[1] text comments ; r[2] comments Address
+if.4 r[0]=='comments'
+r[2]=r[2] +$mod.main()
+commentset r[2],r[1]
+logs 'commentset ' + r[2] +' add at ' + r[1]
+End.4
+i=i+1
+repeat.1
+End.1
+ret
