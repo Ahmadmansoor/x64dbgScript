@@ -1,5 +1,13 @@
 # x64dbg
 This is just a x64dbg script system support.
+on youtube:
+
+Export Functions Comments Labels from IDA inside x64dbg.
+https://youtu.be/PE1RgHLpWC8
+
+Use Global Variable too Run Multipal Script
+https://youtu.be/WlfqNp7E650
+
 ![manual_Page_1](https://user-images.githubusercontent.com/7176580/158775845-9c440394-15f8-4488-a700-ae7bb3f47122.jpg)
 ![manual_Page_2](https://user-images.githubusercontent.com/7176580/158775852-2f5e0477-6f2c-449c-b86f-1ee5c4419683.jpg)
 ![manual_Page_3](https://user-images.githubusercontent.com/7176580/158775854-ab131a24-0dde-4745-9c01-a65f2b4a9648.jpg)
