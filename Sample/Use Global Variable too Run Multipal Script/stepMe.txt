@@ -1,0 +1,13 @@
+int instLength,0
+stepCount=stepCount-1
+logs stepCount
+if.1 stepCount!=0  // this will check if we pass 4 time and then no more set BP
+instLength=$dis.len(CIP)  // measure cmd length so we will set BP after
+bp CIP + instLength   // set BP at next instraction
+SetBreakpointCommand CIP + instLength,'"Call stepMe"'
+logs 'RAX=' + RAX
+End.1
+bpc CIP   // remove current BP
+FinishScript=1
+//run
+ret

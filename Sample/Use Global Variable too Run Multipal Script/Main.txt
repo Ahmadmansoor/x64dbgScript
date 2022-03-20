@@ -1,0 +1,15 @@
+int stepCount,4  // this will be global variable will used in other script stepMe
+int FinishScript,0  // same as above
+bp 2E26 + $mod.main()  // set BP where we want to finish
+bp 2E0F +$mod.main()   // set BP at 00000000FFCE2E04 | 0F85 164B0 | jne notepad.FFCE7920                              |
+SetBreakpointCommand 2E0F +$mod.main(),'"Call stepMe"'  // set command at BP
+run
+if.1 CIP !=2E26 + $mod.main()
+if.2 FinishScript==1  // to check if the script finish
+FinishScript=0
+run
+End.2
+repeat.1
+End.1
+logs 'we reach where we want to stop' + 'RAX=' + RAX
+ret
