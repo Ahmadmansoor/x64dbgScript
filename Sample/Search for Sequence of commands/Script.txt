@@ -1,0 +1,25 @@
+strarr cmds[3]
+str lineaddr
+cmds[0]='mov qword ptr ds:[rbx], rcx'
+cmds[1]='lea rdx,qword ptr ds:[rbx+8]'
+cmds[2]='xor ecx,ecx'
+strarr  res[1]
+hex Nextaddr
+int count,0
+res=findasm cmds[0]
+int i,0
+if.1 i < $ArrayLen(res)
+Nextaddr=res[i]+$dis.len(res[i])
+if.2 cmds[1]==$DisAt(Nextaddr)
+Nextaddr=Nextaddr +$dis.len(Nextaddr)
+//logs Nextaddr
+if.3 cmds[2]==$DisAt(Nextaddr)
+logs 'Found at: ' + res[i]
+count=count+1
+End.3
+End.2
+i=i+1
+repeat.1
+End.1
+logs 'result count is :' + count
+ret
